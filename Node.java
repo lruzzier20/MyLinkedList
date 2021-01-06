@@ -5,5 +5,14 @@ public class Node{
   public Node(String value){
     data=value;
   }
-  
+
+  public String getData(){
+    return data;
+  }
+
+  public String setData(String value){
+    String temp = data;
+    data=value;
+    return temp;
+  }
 }
