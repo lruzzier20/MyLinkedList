@@ -29,7 +29,7 @@ public class MyLinkedList{
     if(index!=0&&index<size){
       Node current=start;
       for(int i=0;current.getNext()!=null;i++){
-        if(i==index){b.setPrev(current.getPrev()); b.setNext(current); current.setPrev(b);}
+        if(i==index){current.getPrev().setNext(b); b.setPrev(current.getPrev()); b.setNext(current); current.setPrev(b);}
         current=current.getNext();
       }
     }
