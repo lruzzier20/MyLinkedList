@@ -67,11 +67,12 @@ public class MyLinkedList{
   }
 
   public String toStringReversed(){
+    System.out.println(size+"");
     Node current4=end;
     String answer="";
     for(int i=size-1;i>=0;i--){
       if(i!=0){answer+=current4.getData()+", ";}else{answer+=current4.getData();}
-      current4=current4.getPrev();
+      if(current4.getPrev()!=null){current4=current4.getPrev();};
     }
     return "{" + answer + "}";
   }
@@ -91,6 +92,16 @@ public class MyLinkedList{
     }
     if(index==size-1){temp1=end.getData(); end.getPrev().setNext(null); end=end.getPrev(); size--; return temp1;}
     return "Whoops!";
+  }
+
+  public void extend(MyLinkedList other){
+    end.setNext(other.start);
+    other.start.setPrev(end);
+    end=other.end;
+    size=size+other.size;
+    other.start=null;
+    other.end=null;
+    other.size=0;
   }
 
 }

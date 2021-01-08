@@ -38,5 +38,14 @@ public class Tester{
     System.out.println(b.toString());
     System.out.println(b.remove(0));
     System.out.println(b.toString());
+    System.out.println("--------------");
+    System.out.println(a.toString());
+    a.extend(b);
+    System.out.println(a.toString());
+    System.out.println(b.toString());
+    System.out.println("reverse time");
+    System.out.println(a.toStringReversed());
+    System.out.println(b.toStringReversed());
+    System.out.println("Finished! :D");
   }
 }
