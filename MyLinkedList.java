@@ -29,36 +29,38 @@ public class MyLinkedList{
       Node current=start;
       for(int i=0;current.getNext()!=null;i++){
         if(i==index){b.setPrev(current.getPrev()); b.setNext(current); current.setPrev(b);}
-        current=current.next();
+        current=current.getNext();
       }
     }
-    if(index=size){end.setNext(b); b.setPrev(end); end=b;}
+    if(index==size){end.setNext(b); b.setPrev(end); end=b;}
   }
 
   public String get(int index){
     if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
     Node current1=start;
-    for(int i=0;current.getNext()!=null;i++){
-      if(i==index){return current1.getValue();}
-      current=current.getNext();
+    for(int i=0;current1.getNext()!=null;i++){
+      if(i==index){return current1.getData();}
+      current1=current1.getNext();
     }
+    return "Whoops!";
   }
 
   public String set(int index, String value){
     if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
     Node current2=start;
     String temp;
-    for(int i=0;current.getNext()!=null;i++){
-      if(i==index){temp=current.getValue(); current.setValue(value); return temp;}
+    for(int i=0;current2.getNext()!=null;i++){
+      if(i==index){temp=current2.getData(); current2.setData(value); return temp;}
     }
+    return "Whoops!";
   }
 
   public String toString(){
     Node current3=start;
     String output="";
-    for(int i=0;current.getNext()!=null;i++){
-      output+=current.getValue;
-      current=current.getNext();
+    for(int i=0;current3.getNext()!=null;i++){
+      output+=current3.getData();
+      current3=current3.getNext();
     }
     return output;
   }

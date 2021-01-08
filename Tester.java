@@ -3,5 +3,6 @@ public class Tester{
     MyLinkedList a = new MyLinkedList();
     System.out.println(a.size());
     a.add("first");
+    System.out.println(a.toString());
   }
 }
