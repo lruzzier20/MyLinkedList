@@ -44,5 +44,14 @@ public class MyLinkedList{
     }
   }
 
+  public String set(int index, String value){
+    if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
+    Node current2=start;
+    String temp;
+    for(int i=0;current.getNext()!=null;i++){
+      if(i==index){temp=current.getValue(); current.setValue(value); return temp;}
+    }
+  }
+
   
 }
