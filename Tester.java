@@ -7,6 +7,8 @@ public class Tester{
       a.add(i+"");
     }
     a.add(13, "hello :3");
+    System.out.println(a.size());
+    System.out.println(a.get(21));
     System.out.println(a.toString());
     System.out.println(a.toStringReversed());
     System.out.println("done!");

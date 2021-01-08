@@ -37,7 +37,7 @@ public class MyLinkedList{
   }
 
   public String get(int index){
-    if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
+    if(index<0||index>=size){throw new IllegalArgumentException("Invalid Index");}
     Node current1=start;
     for(int i=0;current1.getNext()!=null;i++){
       if(i==index){return current1.getData();}
