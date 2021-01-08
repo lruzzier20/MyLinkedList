@@ -60,9 +60,20 @@ public class MyLinkedList{
     Node current3=start;
     String output="";
     for(int i=0;i<size;i++){
-      if(i!=size-1){output+=current3.getData()+", ";}else{output+=current3.getData();};
+      if(i!=size-1){output+=current3.getData()+", ";}else{output+=current3.getData();}
       current3=current3.getNext();
     }
     return "{" + output + "}";
   }
+
+  public String toStringReversed(){
+    Node current4=end;
+    String answer="";
+    for(int i=size-1;i>=0;i--){
+      if(i!=0){answer+=current4.getData()+", ";}else{answer+=current4.getData();}
+      current4=current4.getPrev();
+    }
+    return "{" + answer + "}";
+  }
+
 }
