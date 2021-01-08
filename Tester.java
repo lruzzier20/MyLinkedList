@@ -9,6 +9,8 @@ public class Tester{
     a.add(13, "hello :3");
     System.out.println(a.size());
     System.out.println(a.get(21));
+    a.add(0,"imfirstnow ;))");
+    a.add(0, "huh??");
     System.out.println(a.toString());
     System.out.println(a.toStringReversed());
     System.out.println("done!");

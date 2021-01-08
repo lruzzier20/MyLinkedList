@@ -25,11 +25,11 @@ public class MyLinkedList{
   public void add(int index, String value){
     if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
     Node b = new Node(value);
-    if(index==0){start.setPrev(b); b.setNext(start); start=b;}
+    if(index==0){start.setPrev(b); b.setNext(start); start=b; size++;}
     if(index!=0&&index<size){
       Node current=start;
       for(int i=0;current.getNext()!=null;i++){
-        if(i==index){current.getPrev().setNext(b); b.setPrev(current.getPrev()); b.setNext(current); current.setPrev(b);}
+        if(i==index){current.getPrev().setNext(b); b.setPrev(current.getPrev()); b.setNext(current); current.setPrev(b); size++;}
         current=current.getNext();
       }
     }
