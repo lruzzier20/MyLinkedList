@@ -32,5 +32,11 @@ public class Tester{
     System.out.println(b.size()+"");
     b.add(7, "2.5");
     System.out.println(b.toString());
+    System.out.println(b.remove(7));
+    System.out.println(b.toString());
+    System.out.println(b.remove(5));
+    System.out.println(b.toString());
+    System.out.println(b.remove(0));
+    System.out.println(b.toString());
   }
 }
