@@ -53,5 +53,13 @@ public class MyLinkedList{
     }
   }
 
-  
+  public String toString(){
+    Node current3=start;
+    String output="";
+    for(int i=0;current.getNext()!=null;i++){
+      output+=current.getValue;
+      current=current.getNext();
+    }
+    return output;
+  }
 }
