@@ -14,10 +14,11 @@ public class MyLinkedList{
 
   public boolean add(String value){
     Node a = new Node(value);
-    if(size==0){start=a; size=1; return true;}
+    if(size==0){start=a; end=a; size=1; return true;}
     end.setNext(a);
     a.setPrev(end);
     end=a;
+    size++;
     return true;
   }
 
@@ -58,10 +59,10 @@ public class MyLinkedList{
   public String toString(){
     Node current3=start;
     String output="";
-    for(int i=0;current3.getNext()!=null;i++){
-      output+=current3.getData();
+    for(int i=0;i<size;i++){
+      if(i!=size-1){output+=current3.getData()+", ";}else{output+=current3.getData();};
       current3=current3.getNext();
     }
-    return output;
+    return "{" + output + "}";
   }
 }
