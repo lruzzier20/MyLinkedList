@@ -15,4 +15,24 @@ public class Node{
     data=value;
     return temp;
   }
+
+  public Node getNext(){
+    return next;
+  }
+
+  public Node setNext(Node n){
+    Node temp = next;
+    next=n;
+    return temp;
+  }
+
+  public Node getPrev(){
+    return prev;
+  }
+
+  public Node setPrev(Node n){
+    Node temp = prev;
+    prev=n;
+    return temp;
+  }
 }
