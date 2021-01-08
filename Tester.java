@@ -14,5 +14,23 @@ public class Tester{
     System.out.println(a.toString());
     System.out.println(a.toStringReversed());
     System.out.println("done!");
+    System.out.println("--------------");
+    MyLinkedList b = new MyLinkedList();
+    b.add("0");
+    b.add("1");
+    b.add("2");
+    System.out.println(b.size()+"");
+    System.out.println(b.toString());
+    b.add(0, "-1");
+    System.out.println(b.toString());
+    b.add(1, "-.5");
+    System.out.println(b.toString());
+    b.add(3, "0.5");
+    System.out.println(b.toString());
+    b.add(5, "1.5");
+    System.out.println(b.toString());
+    System.out.println(b.size()+"");
+    b.add(7, "2.5");
+    System.out.println(b.toString());
   }
 }

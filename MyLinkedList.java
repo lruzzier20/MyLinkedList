@@ -23,21 +23,21 @@ public class MyLinkedList{
   }
 
   public void add(int index, String value){
-    if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
+    if(index<0||index>size){throw new IndexOutOfBoundsException("Invalid Index");}
     Node b = new Node(value);
     if(index==0){start.setPrev(b); b.setNext(start); start=b; size++;}
     if(index!=0&&index<size){
       Node current=start;
-      for(int i=0;current.getNext()!=null;i++){
+      for(int i=0;i<size;i++){
         if(i==index){current.getPrev().setNext(b); b.setPrev(current.getPrev()); b.setNext(current); current.setPrev(b); size++;}
-        current=current.getNext();
+        if(i!=size-1){current=current.getNext();}
       }
     }
-    if(index==size){end.setNext(b); b.setPrev(end); end=b;}
+    if(index==size){end.setNext(b); b.setPrev(end); end=b; size++;}
   }
 
   public String get(int index){
-    if(index<0||index>=size){throw new IllegalArgumentException("Invalid Index");}
+    if(index<0||index>=size){throw new IndexOutOfBoundsException("Invalid Index");}
     Node current1=start;
     for(int i=0;current1.getNext()!=null;i++){
       if(i==index){return current1.getData();}
@@ -47,7 +47,7 @@ public class MyLinkedList{
   }
 
   public String set(int index, String value){
-    if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
+    if(index<0||index>size){throw new IndexOutOfBoundsException("Invalid Index");}
     Node current2=start;
     String temp;
     for(int i=0;current2.getNext()!=null;i++){
