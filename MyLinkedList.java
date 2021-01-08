@@ -5,4 +5,8 @@ public class MyLinkedList{
   public MyLinkedList(){
     super();
   }
+
+  public int size(){
+    return size;
+  }
 }
