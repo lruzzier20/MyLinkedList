@@ -27,11 +27,22 @@ public class MyLinkedList{
     if(index==0){start.setPrev(b); b.setNext(start); start=b;}
     if(index!=0&&index<size){
       Node current=start;
-      for(int i=0;current.getNext!=null;i++){
+      for(int i=0;current.getNext()!=null;i++){
         if(i==index){b.setPrev(current.getPrev()); b.setNext(current); current.setPrev(b);}
         current=current.next();
       }
     }
     if(index=size){end.setNext(b); b.setPrev(end); end=b;}
   }
+
+  public String get(int index){
+    if(index<0||index>size){throw new IllegalArgumentException("Invalid Index");}
+    Node current1=start;
+    for(int i=0;current.getNext()!=null;i++){
+      if(i==index){return current1.getValue();}
+      current=current.getNext();
+    }
+  }
+
+  
 }
