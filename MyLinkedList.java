@@ -67,7 +67,6 @@ public class MyLinkedList{
   }
 
   public String toStringReversed(){
-    System.out.println(size+"");
     Node current4=end;
     String answer="";
     for(int i=size-1;i>=0;i--){
